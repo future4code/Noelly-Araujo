@@ -5,25 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="./img/fishing.png"/>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./img/fishing.png" />
 
     <title>Fresh Fishing</title>
 </head>
 
 <body>
-    <div>
-        <h1>Bem-vind@ ao <em>Fresh Fishing</em>!</h1>
-        <p>Aqui você econontra os melhores produtos para aquela PESCARIA de fim de semana!</p>
-    </div>
+    <header class="barra-1">
+        <main>
+            <div class="busca">
+                <input id="search-barra" type="text" placeholder="Search Something" />
+            </div>
+            <div class="container">
+                <a href="./index.html">
+                    <img src="./img/logo-frash.png" />
+                </a>
+                
+            </div>
+            <div class="redes-sociais">
+                <ul>
+                    <li><a href="">
+                            <img src="./img/facebook.icon.png" alt="logo facebook" />
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <img src="./img/instagram.icon.png" alt="logo instagram" />
+                        </a>
+                    </li>
+                    <li><a href="">
+                            <img src="./img/twitter.icon.png" alt="logo twitter" />
+                        </a>
+                    </li>
 
-    <div>
-        <a href="./index.html">Página Inicial</a>
-        <a href="./ctrl-estoque.html">Controle de Estoque</a>
-        <a href="./add-produto.html">Adicionar Produto</a>
-        <a href="./funcionarios.html">Funcionários</a>
-    </div>
+                </ul>
 
+        </main>
+    </header>
+    <main class="col-100 menus">
+
+        <div class="paginacao-2">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Página Inicial</a></li>
+                    <li><a href="./ctrl-estoque.html">Controle de Estoque</a></li>
+                    <li> <a href="./add-produto.html">Adicionar Produto</a></li>
+                    <li> <a href="./funcionarios.html">Funcionários</a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+
+    </main>
     <div>
+        <h1 id="welcome">Bem-vind@ ao <em>Fresh Fishing</em>!</h1>
+        <p>Aqui você encontra os melhores produtos para aquela PESCARIA de fim de semana!</p>
+
         <p>Entregamos para todo o Brasil, a partir de R$ 250,00 em compras, ganhe frete GRÁTIS + um vouncher de 15% de
             DESCONTO para a próxima compra. </p>
     </div>
@@ -34,8 +75,59 @@
             <img src="https://image.flaticon.com/icons/png/512/25/25305.png" />
             <img src="https://image.flaticon.com/icons/png/512/25/25425.png" />
             <img src="https://image.flaticon.com/icons/png/512/8/8800.png" />
+
         </div>
     </div>
+
+    <footer>
+        <div class="col-100 footer">
+            <div class="content">
+                <div class="col-4">
+                    <h3>
+                        <b>A little about us</b>
+                    </h3>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything.</p>
+                </div>
+
+                <div class="col-4">
+                    <h3><b> Get in touch </b></h3>
+                    <p>Lorem Ipsum is simply dummy
+                        of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since.</p>
+                    <p>Alabama, US</p>
+                    <p>email@email.com</p>
+                    <p>(xxx)555-555</p>
+                </div>
+                <div class="col-4">
+                    <h3><b>Tags</b></h3>
+                    <p>apps <em>blog</em> logroll christmas cms coda concert <em>daily</em> <br />
+                        <em>design</em> develop dialog drinks envato food fun
+                        gallery gift holiday icon <em>illustration</em> ipad iphone journal <em>jquery</em>
+                        lel link marketing bile motion music photo <em>profession</em> quotation
+                        recipes show sound strategy tvtypography <em>video</em>.
+                </div>
+
+                <div class="col-4">
+                    <h3><b>Institucional</b></h3>
+                    <p> Lorem Ipsum is simply dummy
+                        text of the printing.</p>
+
+                    <p>Lorem Ipsum is simply dummy
+                        text of the printing.</p>
+
+                </div>
+
+                <div class="newslatter">
+                    <h4 id="boletim">Receba nossa newslatter!</h4>
+                    <input id="news" type="text" placeholder="Digite seu e-mail" />
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
