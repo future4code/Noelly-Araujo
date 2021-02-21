@@ -44,6 +44,9 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+   position: absolute;
+   top: 1000px;
+   left: 610px;
 }
 
 .botao-amarelo:hover {
@@ -53,12 +56,12 @@ div img {
 .container {
     height: 500px;
     text-align: center;
+    padding-top: 140px;
 }
 
 .icone {
     height: 15px;
 }
-
 
 /** 
   *
@@ -85,15 +88,13 @@ div img {
     font-size: 60px;
 }
 
-
 /**
   *
   *  ESTILOS COMPRAR 
   *
   **/
 
-div:nth-child(2),
-div:last-child {
+div:nth-child(2), div:last-child {
     text-align: center;
 }
 
@@ -113,7 +114,6 @@ td button {
     margin-top: 20px;
     height: 100px;
 }
-
 
 #back-button {
     background-color: white;
