@@ -19,8 +19,13 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border-width: 0px 0px 1px;
+    outline: 0px;
+    padding: 0px;
 }
 
+ 
+   
 button:focus {
     color: white;
 }
@@ -78,6 +83,7 @@ table img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+   
 }
 
 #container-de-descricao>ol {
