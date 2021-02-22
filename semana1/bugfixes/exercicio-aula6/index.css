@@ -37,6 +37,11 @@ div img {
     background: black;
 }
 
+table img {
+    width: 100px;
+    height: 100px;
+}
+
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
