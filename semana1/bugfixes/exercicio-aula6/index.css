@@ -19,7 +19,7 @@ h2 {
 input {
     height: 20px;
     width: 500px;
-    border-width: 0px 0px 1px;
+    border-width: 0px 0px 2px;
     outline: 0px;
     padding: 0px;
 }
