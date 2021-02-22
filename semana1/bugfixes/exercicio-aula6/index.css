@@ -53,6 +53,10 @@ div>p:first-child {
     height: 20px;
 }
 
+.icone:hover {
+    opacity: 30%;
+}
+
 
 table img {
     width: 100px;
