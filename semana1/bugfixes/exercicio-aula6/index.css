@@ -32,9 +32,9 @@ img {
 div>p:first-child {
     display: inline;
 }
-
-div img {
-    background: black;
+.icone  {
+    width: 20px;
+    height: 20px;
 }
 
 table img {
