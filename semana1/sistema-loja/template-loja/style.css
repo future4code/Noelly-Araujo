@@ -1,8 +1,9 @@
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
 }
+
+/* Header */
 
 header {
   width: 100%;
@@ -12,6 +13,20 @@ header {
   overflow: hidden;
 }
 
+/*header*/
+
+/*main*/
+
+#style {
+  text-transform: uppercase;
+  text-align: center;
+  color: #585656;
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+/* imagens de redes sociasi acima do footer*/
+
 .container img {
   max-width: 10%;
   max-height: 10%;
@@ -20,10 +35,27 @@ header {
   padding-left: 35px;
 }
 
+/* imagens de redes sociais acima do footer*/
+
+/* frase "Bem-vindo" topo do site*/
+
 #welcome {
-  position: center;
-  padding-left: 457px;
+  text-align: center;
+  padding-top: 40px;
 }
+
+#welcome strong {
+  color: teal;
+}
+
+#welcome em {
+  color: yellowgreen;
+  font-size: 30px;
+}
+
+/* frase "Bem-vindo" topo do site*/
+
+/* input topo do site*/
 
 #search-barra {
   border-color: grey;
@@ -46,6 +78,10 @@ header {
   margin-top: 20px;
   border: 1px solid #d6d6d6;
 }
+
+/*input topo do site*/
+
+/* redes sociais topo do site*/
 
 .redes-sociais ul li {
   margin-left: 5px;
@@ -70,21 +106,30 @@ header {
   top: 30px;
 }
 
+/* redes sociais topo do site*/
+
+/* classe divididas*/
+
 .col-100 {
   width: 100%;
   float: left;
 }
 
+/* classe divididas*/
+
+/*footer*/
+
 .footer {
   background-color: aquamarine;
   width: 100%;
   height: 300px;
-  position: fixed;
+  left: 0;
   bottom: 0;
-
+  display: flex;
 }
 
 .col-4 {
+  margin-top: 18px;
   float: left;
   width: 25%;
   text-align: center;
@@ -120,12 +165,25 @@ em {
   margin-top: 32px;
 }
 
+.enviar {
+  width: 28px;
+  height: 28px;
+  margin-left: 102em;
+  margin: 0;
+  background-color: rgb(243, 8, 8);
+  color: #ffffff;
+}
+
 #boletim {
   font-size: 20px;
   position: absolute;
   margin-top: 2px;
   padding-left: 75%;
 }
+
+/*footer*/
+
+/* paginação de menus*/
 
 .paginacao {
   background-color: #ffff;
@@ -137,48 +195,318 @@ em {
 .menu {
   padding-top: 12px;
 }
+
 .menus {
   height: 35px;
-  border-bottom: 3px solid aquamarine;
+}
+
+.menu li {
+  border-bottom: 5px solid lightseagreen;
 }
 
 .menu ul li {
   display: inline-block;
   color: black;
   margin-left: 10px;
-  height: 50px;
+  height: 25px;
+  margin-left: 35px;
 }
 
 .menu ul li a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: 16px;
   color: rgb(17, 17, 73);
 }
 
+.menu ul li a:hover {
+  color: rgb(84, 19, 238);
+}
+
+/*paginação de menu*/
+
+/* redes sociais do footer*/
+
 #redes-sociais2 img {
   position: relative;
-  width: 25px;
-  height: 25px;
-  margin-left: 12px;
-  top: 220px;
-  left: 665px;
+  width: 50px;
+  height: 50px;
+  padding-left: 17px;
+}
+
+.r-icons {
+  padding-top: 20px;
+  padding-left: 625px;
+  margin: 15px;
 }
 
 #p-redes {
-  position: fixed;
-  margin-top: 235px;
-  margin-left: 645px;
+  padding-left: 29em;
+  font-size: 22px;
+  padding-top: 25px;
 }
+
+/*redes sociais do footer*/
+
+/*texto sobre*/
 
 #sobre {
   padding-top: 255px;
 }
-=======
-header {
-    width:100%;
-    background-color: #f49418;
-    height: 44px;
-    overflow: hidden;
-  }
->>>>>>> master
+
+/* texto sobre*/
+
+/*funcionarios.html*/
+
+.funcionarios-list {
+  margin-top: 250px;
+}
+
+/*funcionarios.html*/
+
+/*bloco prop*/
+
+#prop {
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-image: url(./img/fauna.jpg);
+  background-size: 100%;
+  margin-top: 230px;
+}
+
+.bloq {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 19%;
+  float: left;
+  position: relative;
+  background: transparent;
+}
+
+.bloco-imagem img {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.bloco-imagem {
+  height: 275px;
+  border: 1px solid #c5c5c5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 12px;
+  margin-left: 50px;
+  margin-top: 35px;
+}
+
+.bloco-imagem p, b {
+  text-align: left;
+}
+
+.bloco-t1 {
+  margin-top: 3em;
+}
+
+.bloco-t1 {
+  background-color: #eeeeee;
+}
+
+/* bloco prop*/
+
+/*vouncher*/
+
+.sobre {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  margin-top: 180px;
+}
+
+.sobre p {
+  color: yellow;
+  text-transform: uppercase;
+  font-size: 19px;
+  padding-left: 60px;
+  padding-top: 50px;
+}
+
+.sobre strong {
+  color: red;
+font-size: 22px;
+}
+/*vouncher*/
+
+/* page vendas*/
+
+#register-items {
+  width: 45em;
+  height: 20em;
+  background: #ffffff;
+  margin-top: 35px;
+  border-radius: 18px;
+}
+
+#one {
+  width: 57em;
+  height: 30em;
+  background: lightsteelblue;
+  padding-top: 35px;
+  margin: 150px 75px 150px;
+  text-align: left;
+  padding-left: 25px;
+  border-radius: 18px;
+}
+
+.cpd, .div-npd, .price, .numero-vendedor, .qt {
+  float: left;
+  padding-top: 8px;
+  padding-left: 15px;
+}
+
+.cadastro-items {
+  padding-top: 85px
+}
+
+.total {
+  margin-top: 22px;
+  margin-left: 26em;
+}
+
+#word {
+  position: absolute;
+  padding-left: 15em;
+  text-transform: uppercase;
+}
+
+.btn-cadastro {
+  width: 5em;
+  height: 3em;
+  position: relative;
+  border-radius: 3px;
+}
+
+/* page vendas */
+
+/* histórico de vendas*/
+
+.loi {
+  margin: 65px;
+  background: #ffffff;
+  margin-top: 25px;
+}
+
+.loi th {
+  height: 35px;
+  padding: 8px;
+}
+
+.loi, .tabela-historico {
+  background-color: rgb(209, 233, 241);
+}
+
+.table-filtro {
+  background-color: greenyellow;
+}
+
+.titulo-H {
+  padding-top: 95px;
+  text-align: center;
+  color: rgb(54, 135, 216);
+}
+
+/*histórico de vendas*/
+
+/*controle de estoqque*/
+
+.ctrl-estoque {
+  background-color: lightsteelblue;
+  width: 70em;
+  margin: 55px;
+}
+
+td img {
+  width: 175px;
+  height: 175px;
+}
+
+.ctrl-estoque th {
+  height: 33px;
+  background-color: yellowgreen;
+}
+
+.ctrl-estoque {
+  text-align: center;
+}
+
+#b-ctrl {
+  padding-top: 120px;
+  padding-left: 22em;
+  color: rgb(104, 102, 223);
+}
+
+/*controle de estoque*/
+
+/*page funcionarios*/
+
+#ol-func {
+  background-color: yellowgreen;
+  width: 400px;
+  height: 300px;
+  margin: 30px;
+  text-align: center;
+}
+
+#func {
+  list-style: none;
+}
+
+#ol-func li {
+  margin-top: 15px;
+  padding-top: 20px;
+}
+
+#name-func {
+  margin-top: 90px;
+  padding-left: 7em;
+}
+
+/*page funcionários*/
+
+/*add-produto*/
+
+#form-add-prod {
+  width: 500px;
+  height: 400px;
+  background-color: thistle;
+  margin: 55px;
+  border-radius: 12px;
+}
+
+.label-for, #label-for {
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.label-for input {
+  width: 20em;
+}
+
+#label-for {
+  padding-left: 13em;
+  padding-top: 5em;
+}
+
+#l-btn {
+  width: 100px;
+  height: 50px;
+}
+
+.page-add-prod {
+  padding-top: 120px;
+  padding-left: 8em;
+  color: rgb(133, 79, 219)
+}
+
+/*add produto*/

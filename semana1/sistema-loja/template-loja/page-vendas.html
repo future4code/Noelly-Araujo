@@ -3,22 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css" class="css">
     <link rel="icon" href="./img/f3.png" />
-
-
-  <title>Adicionar Produto</title>
+    <title>Vendas</title>
 </head>
+
+
+
+
 
 <body>
 
     <header class="barra-1">
-
         <main>
             <div class="busca">
-             <input id="search-barra" type="text" placeholder="Search Something" />
+                <input id="search-barra" type="text" placeholder="Search Something" />
             </div>
             <div class="container">
                 <a href="./index.html">
@@ -44,55 +45,75 @@
                 </ul>
         </main>
     </header>
-       
 
     <main class="col-100 menus">
-    </div>
-    <div class="paginacao-2">
+        </div>
+        <div class="paginacao-2">
 
-        <div class="menu">
-            <ul>
-                <li><a href="./index.html">Página Inicial</a></li>
-                <li><a href="./ctrl-estoque.html">Controle de Estoque</a></li>
-                <li> <a href="./add-produto.html">Adicionar Produto</a></li>
-                <li> <a href="./funcionarios.html">Funcionários</a></li>
-                <li> <a href= "./page-vendas.html">Vendas</a></li>
-                <li> <a href= "./historico-de-vendas.html">Histórico de vendas</a></li>
-            </ul>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Página Inicial</a></li>
+                    <li><a href="./ctrl-estoque.html">Controle de Estoque</a></li>
+                    <li> <a href="./add-produto.html">Adicionar Produto</a></li>
+                    <li> <a href="./funcionarios.html">Funcionários</a></li>
+                    <li> <a href="./page-vendas.html">Vendas</a></li>
+                    <li> <a href="./historico-de-vendas.html">Histórico de vendas</a></li>
+                </ul>
 
 
-
+            </div>
 
         </div>
 
-    </div>
-</main>
+    </main>
 
+    <form id="one" action="">
 
-    <h2 class="page-add-prod">Adicionar Produto</h2>
-    <form action="#" id="form-add-prod">
-        <div class="label-for">
-            <label for="link para foto">Link para foto: </label>
-            <input type="url" id="vara-1-conjunto" name="vara de pesca conjunto">
+        <div class="div-npd">
+
+            <label for="nome do produto">Nome do Produto</label>
+            <input type="text" id="name-pd" name="especificacao">
+            <button class="btn" id="buscar-produto">...</button>
+
         </div>
 
-        <div class="label-for">
-            <label for="descricao">Descrição do produto: </label>
-            <input type="text" id="desc" name="descrição">
+        <div class="cpd">
+
+            <label for="codigo do produto">Código do Produto</label>
+            <input type="number" id="product-id" name="codigo">
+            <button class="btn" id="buscar-por-codigo">...</button>
         </div>
 
-       <div class="label-for">
-        <label>Preço (em R$): </label>
-            <input type="text" id="preco" name="preço">
+        <div class="price">
+            <label for="Preco">Preço R$</label>
+            <input type="float" id="pr-product" name="preco">
         </div>
 
-        <div class="label-for">
-            <label >Quantidade disponível: </label>
-            <input type="number" id="quantidade" name="quantidade">
+        <div class="qt">
+            <label for="Quantidade">Quantidade</label>
+            <input type="number" id="quant" name="quantidade">
         </div>
 
-        <div  id= "label-for"class="form-add">
-            <button id="l-btn" type="subimit">Adicionar</button>
+        <div class="numero-vendedor">
+            <label for="id-vendedor">ID Vendedor</label>
+            <input type="text" id="n-vendedor" name="nome-vendedor">
+        </div>
+
+        <div class="cadastro-items">
+            <label id= "word"  for="register">Registro de itens</label>
+            <input type="text" id="register-items" name="list-products">
+            <button class="btn-cadastro" id="btn-include">Incluir</button>
+            <button class="btn-cadastro" id="btn-delete">Excluir</button>
+            <button class="btn-cadastro" id="btn-cancel">Cancelar</button>
+            <button class="btn-cadastro" id="btn-save">Salvar</button>
+
+        </div>
+
+        <div class= "total">
+
+            <label for="total">Total:</label>
+            <input type="float" id="include-total" name="total-items">
+
         </div>
 
     </form>
@@ -148,7 +169,6 @@
 
         </div>
     </footer>
-
 </body>
 
 </html>

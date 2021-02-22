@@ -9,7 +9,7 @@
     <link rel="icon" href="./img/f3.png" />
 
 
-  <title>Controle de Estoque</title> 
+    <title>Controle de Estoque</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <header class="barra-1">
         <main>
             <div class="busca">
-            <input id="search-barra" type="text" placeholder="Search Something" />
+                <input id="search-barra" type="text" placeholder="Search Something" />
             </div>
             <div class="container">
                 <a href="./index.html">
@@ -43,72 +43,83 @@
                 </ul>
         </main>
     </header>
+
+
     
-
-    <div>
-        <p>Fresh Fishing</p>
-    </div>
-
     <main class="col-100 menus">
-    </div>
-    <div class="paginacao-2">
+        </div>
+        <div class="paginacao-2">
 
-        <div class="menu">
-            <ul>
-                <li><a href="./index.html">Página Inicial</a></li>
-                <li><a href="./ctrl-estoque.html">Controle de Estoque</a></li>
-                <li> <a href="./add-produto.html">Adicionar Produto</a></li>
-                <li> <a href="./funcionarios.html">Funcionários</a></li>
-            </ul>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Página Inicial</a></li>
+                    <li><a href="./ctrl-estoque.html">Controle de Estoque</a></li>
+                    <li> <a href="./add-produto.html">Adicionar Produto</a></li>
+                    <li> <a href="./funcionarios.html">Funcionários</a></li>
+                    <li> <a href="./page-vendas.html">Vendas</a></li>
+                    <li> <a href="./historico-de-vendas.html">Histórico de vendas</a></li>
+                </ul>
 
+
+
+
+            </div>
 
         </div>
+    </main>
+    
+    <h2 id= "b-ctrl">Controle de Estoque</h2>
 
-    </div>
-</main>
-    <h2>Controle de Estoque</h2>
+    <table class="ctrl-estoque" border="1">
 
-    <table>
         <tr>
-            <th>
-                <img src="./img/vara-de-pesca-conjunto.jpg" alt="Vara de Pescar">
-            </th>
-            <th>Conjunto de vara de pesca e carretel.
-            </th>
-            <th>R$574,60</th>
-            <th>20</th>
+
+            <th>Produto</th>
+            <th>Especificação</th>
+            <th>Preço</th>
+            <th>unit Disponível</th>
+
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/vara de pescar1.jpg" alt="Vara de Pescar">
+            </td>
+            <td>Conjunto de vara de pesca e carretel.
+            </td>
+            <td>R$574,15</td>
+            <td>20</td>
         </tr>
 
         <tr>
-            <td><img src="./img/kit-completo.jpg" alt="Kit com 3 varas de pescar" /></td>
+            <td><img src="./img/kit v de pescar.jpg" alt="Kit com 3 varas de pescar" /></td>
             <td> Kit pesca completo</td>
-            <td> R$ 465,49 </td>
+            <td> R$ 465,70 </td>
             <td> 10 </td>
         </tr>
 
         <tr>
-            <td><img src="./img/carretel-linha-pesca.jpg" alt="kit de carretel" /></td>
+            <td><img src="./img/marine sports.jpg" alt="kit de carretel" /></td>
             <td> Kit de conversão de carretel de pesca oco portátil.</td>
-            <td> R$ 425,47</td>
+            <td> R$ 425,00</td>
             <td> 30</td>
         </tr>
 
         <tr>
-            <td><img src="./img/alca-de-carretel.jpg" alt="alça de carretel" /></td>
+            <td><img src="./img/alca metal.jpg" alt="alça de carretel" /></td>
             <td> Kit alça de carretel giratório de metal portátio completo para pesca. </td>
-            <td>R$ 154,57 </td>
+            <td>R$ 154,70 </td>
             <td>18 </td>
         </tr>
 
         <tr>
-            <td><img src="./img/truta-cabeca-de-cobra.jpg" alt="isca de peixe" /></td>
-            <td> Kit de isca de pesca com 5 unidades de 13cm de pvc. Truta cabeça de cobra. </td>
-            <td> R$ 97,50</td>
-            <td> 50 </td>
+            <td><img src="./img/for truta.jpg" alt="isca de peixe" /></td>
+            <td> Isca truta cabeça de cobra</td>
+            <td> R$ 50,00</td>
+            <td>700</td>
         </tr>
 
         <tr>
-            <td><img src="./img/anzol-preto.jpg" alt="anzol preto" /></td>
+            <td><img src="./img/anzo.jpg" alt="anzol preto" /></td>
             <td>conjunto anzol preto com 500 pcs</td>
             <td>R$ 110,66</td>
             <td>3000</td>
@@ -161,6 +172,7 @@
                 <div class="newslatter">
                     <h4 id="boletim">Receba nossa newslatter!</h4>
                     <input id="news" type="text" placeholder="Digite seu e-mail" />
+                    <button class="enviar" id="new-send">Ok</button>
                 </div>
             </div>
 
