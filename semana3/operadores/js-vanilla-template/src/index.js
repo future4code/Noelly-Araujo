@@ -103,11 +103,63 @@ console.log((valorC2)*9/5+32, valorC2+273.15)
 
 const quilowatts = 280
 const custoHora = 0.05
+// a)
 const consumoReal = quilowatts*custoHora
-const desconto = consumoReal - 15
+const calC = consumoReal * 0.15
+// b)
+const desconto = consumoReal-calC
 
+console.log('O consumo da residência e de', consumoReal)
 console.log('O valor é' +' '+ 'R$'+ consumoReal)
 
-console.log(desconto)
+console.log('O valor a ser pago com desconto é de',desconto)
+
+// 3-
+
+
+// a)
+const libraKg = 20
+const calcLibra = libraKg * 453.592
+const resulTbb = calcLibra.toFixed(2)
+console.log('20 lb equivalem a',resulTbb, 'kg')
+
+// b)
+const ozKg = 10.5
+const calcOz = ozKg / 3.527
+const resulToz = calcOz.toFixed(2)
+console.log('10.5 oz equivalem a ', resulToz, 'kg')
+
+
+// c)
+const miM = 100
+const calcM = miM * 1609
+const resulTm = calcM.toFixed(2)
+console.log('100 m equivalem a ', resulTm,'m')
+
+
+// d)
+const pesM = 50
+const calcP = pesM / 3.281
+const resultPm = calcP.toFixed(2)
+console.log('50 ft equivalem a', resultPm, 'm')
+
+
+// e)
+const galaoL = 103.5
+const calcGl = galaoL * 3.785
+const resultGl = calcGl.toFixed(2)
+console.log('103.5 g equivalem a', resultGl,'l')
+
+
+// f)
+const xicaraL = 450
+const calcX = (450*6) /25
+console.log('450 x equivalem a', calcX, 'l')
+
+// g)
+
+const novX = prompt('Digite um valor')
+console.log(novX, 'x', 'equivalem a', (novX * 6) /25, 'l')
+
 
 
