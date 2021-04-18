@@ -1,14 +1,17 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { goToAdminPainel, goToHome, goToLogin, goToSeeAllTrips } from '../routes/coordinator';
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
+
+
 
 
 const CreateTrip = () => {
+
+
     return (
 
         <>
 
-        <p>Hi</p>
+       <p>hi</p>
         </>
 
     )

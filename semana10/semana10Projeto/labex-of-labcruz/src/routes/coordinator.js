@@ -6,12 +6,12 @@ export const goToSeeAllTrips = (history) => {
     history.push('/SeeAllTrips')
 }
 
-export const goToSingUp = (history) => {
-    history.push('/SingUp')
+export const goToSignUp = (history) => {
+    history.push('/SignUp')
 }
 
-export const goToLogin = (history) => {
-    history.push('/Login')
+export const goToLoginPage = (history) => {
+    history.push('/LoginPage')
 }
 
 
@@ -23,8 +23,8 @@ export const goToCreateTrip = (history) => {
     history.push('/CreateTrip')
 }
 
-export const goToShowDetails = (history) => {
-    history.push('/ShowDetails')
+export const goToShowDetails = (history,id) => {
+    history.push(`/ShowDetails/${id}`)
 }
 
 

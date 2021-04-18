@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import Login from '../pages/Login';
 import SeeAllTrips from '../pages/SeeAllTrips';
-import ShowDetails from '../pages/ShowDetails';
 import CreateTrip from '../pages/CreateTrip';
 import AdminPainel from '../pages/AdminPainel';
-import SingUp from '../pages/SingUp';
+import SignUp from '../pages/SignUp';
+import LoginPage from '../pages/LoginPage';
+import ShowDetails from '../pages/ShowDetails';
 
 
 const Router = () => {
@@ -24,30 +24,30 @@ const Router = () => {
                     <Home />
 
                 </Route>
-                <Route exact path='SeeAllTrips'>
+                <Route exact path='/SeeAllTrips'>
                     <SeeAllTrips />
 
                 </Route>
 
-                <Route exact path='Sing Up'>
-                    <SingUp />
+                <Route exact path='/SignUp'>
+                    <SignUp />
                 </Route>
 
-                <Route exact path='Login'>
-                    <Login />
+                <Route exact path='/LoginPage'>
+                    <LoginPage />
 
                 </Route>
 
-                <Route exact path='AdminPainel'>
+                <Route exact path='/AdminPainel'>
 
                     <AdminPainel />
 
                 </Route>
-                <Route exact path='CreateTrip'>
+                <Route exact path='/CreateTrip'>
                     <CreateTrip />
                 </Route>
 
-                <Route exact path='ShowDetails'>
+                <Route exact path='/ShowDetails/'>
 
                     <ShowDetails />
                 </Route>

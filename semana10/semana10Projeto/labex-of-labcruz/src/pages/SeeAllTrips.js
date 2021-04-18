@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { goToAdminPainel, goToHome, goToLogin, goToSeeAllTrips, goToSingUp } from '../routes/coordinator';
+import { goToSignUp } from '../routes/coordinator';
 
 
 
@@ -9,11 +9,13 @@ const SeeAllTrips = () => {
 
     return (
 
-        <>
+        <div>
             <p>Hi I'm See All Trips</p>
-            <button onClick={() => goToSingUp(history)}>Sing Up</button>
+            <button>Go Back</button>
+            <button onClick={() => goToSignUp(history)}>SignUp</button>
+          
 
-        </>
+        </div>
 
 
 
