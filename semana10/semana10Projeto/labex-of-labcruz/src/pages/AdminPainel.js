@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { goToCreateTrip, goToShowDetails } from '../routes/coordinator';
+import { goToCreateTrip, goToHome, goToShowDetails } from '../routes/coordinator';
 
 
 const AdminPainel = () => {
     const [listTrip, setListTrips] = useState([])
     const history = useHistory()
 
-  const getTrips = () => {
+    const getTrips = () => {
         axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/noelly-costa-cruz/trips`)
 
             .then((res) => {
@@ -22,12 +22,12 @@ const AdminPainel = () => {
 
     useEffect(() => {
         getTrips()
-    },[])
- const listTrip1 = listTrip.map((trips) => {
+    }, [])
+    const listTrip1 = listTrip.map((trips) => {
         return (
             <>
 
-                <li onClick={() => goToShowDetails(history,trips.id)}>
+                <li onClick={() => goToShowDetails(history, trips.id)}>
                     {trips.name}
                 </li>
 
@@ -49,8 +49,9 @@ const AdminPainel = () => {
             <ul>
                 {listTrip1}
             </ul>
-
+            <button onClick = {() => goToHome(history)}>Go Back</button>
             <button onClick={() => goToCreateTrip(history)}>Create a trip</button>
+            <button>Logout</button>
 
 
         </div>

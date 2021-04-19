@@ -23,3 +23,4 @@ export const useForm = (initialForm) =>{
 
 }
 
+export default useForm;
