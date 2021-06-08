@@ -1,4 +1,4 @@
-import { connection } from "..";
+import { connection } from "../";
 
 export default async function insertTask(
     id: string,
