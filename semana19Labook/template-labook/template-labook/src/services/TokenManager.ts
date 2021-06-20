@@ -1,16 +1,30 @@
-import express from "express"
-import tokenmanager from ""
+import * as jwt from "jsonwebtoken"
+import { UserDatabase } from "../data/UserDatabase"
+import { authenticationData } from "../model/user"
 
 
-var tokenManager = require('tokenmanager');
-var router = require('express').Router();
-var tokenManager = require('tokenmanager');
-tokenManager.configure( {
- "decodedTokenFieldName":"UserToken",
- "authorizationMicroserviceUrl":"http://localhost:3000",
- "authorizationMicroserviceToken":"4343243v3kjh3k4g3j4hk3g43hjk4g3jh41h34g3",
- "exampleUrl":"http://miosito.it",
- "tokenFieldName":"access_token",
- "secret":"secretKey"
-});
+
+
+  export const generateToken = (
+   payload: authenticationData
+): string => {
+   return jwt.sign(
+      payload,
+      process.env.JWT_KEY as string,
+      {
+         expiresIn: "24min"
+      }
+   )
+}
+
+  export const getTokenData = (
+   token: string
+): authenticationData => {
+   const { id, role } = jwt.verify(
+      token,
+      String(process.env.JWT_KEY)
+   ) as authenticationData
+
+   return { id, role }
+}
 
