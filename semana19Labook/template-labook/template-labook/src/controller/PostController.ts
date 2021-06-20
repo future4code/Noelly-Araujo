@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { PostBusiness } from "../business/PostBusiness"
-import { getPostByIdInputDTO } from "../entities/Post"
+import { getPostByIdInputDTO, getPostByIdOutputDTO } from "../entities/Post"
 import { AuthenticationData } from "../model/user"
 import { UserBusiness } from "../business/UserBusiness"
 import {Post} from "../entities/Post"
@@ -41,6 +41,12 @@ export class PostController {
             }
 
             const post: Post = await new PostBusiness().getpostById(input)
+            const output: getPostByIdOutputDTO ={
+                photo: post.photo,
+                type: post.type,
+                description: post.description,
+                createdAt: post.createdAt
+            }
 
             res.status(200).send({ message, post })
 

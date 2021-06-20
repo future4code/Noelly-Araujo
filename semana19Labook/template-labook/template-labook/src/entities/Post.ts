@@ -25,6 +25,14 @@ export interface getPostByIdInputDTO {
     id: string
 }
 
+export interface getPostByIdOutputDTO{
+    photo: string,
+    description: string,
+    type: POST_TYPES,
+    createdAt: Date
+    
+}
+
 export function toPostsModel(obj: any): Post{
     return obj &&  {
         id: obj.id,
