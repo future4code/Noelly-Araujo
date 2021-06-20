@@ -1,30 +1,43 @@
 import * as jwt from "jsonwebtoken"
+import * as bcrypt from "bcryptjs";
+
 import { UserDatabase } from "../data/UserDatabase"
-import { authenticationData } from "../model/user"
+import { AuthenticationData } from "../model/user"
 
 
-
-
-  export const generateToken = (
-   payload: authenticationData
-): string => {
+function generateToken(
+   payload: AuthenticationData
+): string {
    return jwt.sign(
       payload,
       process.env.JWT_KEY as string,
       {
-         expiresIn: "24min"
+         expiresIn: process.env.JWT_EXPIRES_IN
       }
    )
 }
 
-  export const getTokenData = (
+function getTokenData(
    token: string
-): authenticationData => {
-   const { id, role } = jwt.verify(
+): AuthenticationData {
+   const result: any = jwt.verify(
       token,
-      String(process.env.JWT_KEY)
-   ) as authenticationData
+      process.env.JWT_KEY as string
+   )
 
-   return { id, role }
+   return result
 }
 
+const hash = async (
+   plainText: string
+): Promise<string> => {
+   const rounds = Number(process.env.BCRYPT_COST);
+   const salt = await bcrypt.genSalt(rounds);
+   return bcrypt.hash(plainText, salt)
+}
+
+const compare = async (
+   plainText: string, cypherText: string
+): Promise<boolean> => {
+   return bcrypt.compare(plainText, cypherText)
+}
