@@ -1,0 +1,113 @@
+* {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden ;
+}
+/*header*/
+.content-head    
+ {
+    display: flex;
+}
+.header {
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#h1-header {
+    text-align: center;
+    padding-top: 100px;
+    color: #D93C2E;
+}
+#h2-like {
+    text-align: center;
+    margin-top: 6px;
+    color: #F0643E;
+}
+.my-pic {
+    padding-left: 42%;
+    margin-top: 25px;
+}
+#pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 120px;
+}
+/*header*/
+.m-construcao {
+    width: 600px;
+    height: 600px;
+    padding-left: 425px;
+    margin-top: 74px;
+}
+#c-construcao{
+ width: 500px;
+ height: 400px;
+}
+
+/*buttons*/
+#sobre {
+    background: none;
+    width: 80px;
+    font-size: 17px;
+    border: none;
+    color: #D9692E;
+}
+
+
+#contato {
+    background: none;
+    width: 80px;
+    border: 2px solid #fa1e15;
+    margin-left: 15px;
+    font-size: 17px;
+    border-radius: 9px;
+    color: #fa1e15;
+}
+#contato:hover {
+    background-color: #ffbd80;
+}
+
+.buttons {
+    padding-left: 80%;
+    margin-top: 20px;
+}
+/*buttons*/
+
+/*header2*/
+.apresentacao {
+    width: 100%;
+    height: 300px;
+    background-color: #F0643E;
+    text-align: center;
+}
+.apresentacao h2 {
+    color: #ffff;
+    margin-top: 50px;
+}
+.apresentacao p {
+    color: #ffff;
+    margin-top: 60px;
+    width: 50%;
+    font-family: 26px;
+    margin-left: 320px;
+
+}
+/*skills*/
+.content-skills{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    margin-top: 40px;
+    padding-left: 325px;
+}
+.FrontEnd, 
+.BackEnd {
+    height: 400px;
+    width: 300px;
+    background-color: orange;
+    margin-left: 45px;
+    box-shadow: inset 0 0 1em gold, 0 0 1em red;
+}
