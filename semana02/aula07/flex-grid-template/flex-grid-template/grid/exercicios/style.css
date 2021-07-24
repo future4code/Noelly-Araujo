@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page-container {
+    display: grid;
+    grid-template-columns: 300px 1fr 200px;
+    grid-template-rows: 70px 1fr 70px;
+    height: 100vh;
+}
+header {
+    background-color: #f9b24d;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+img {
+    width: 100px;
+}
+
+main {
+    background-color: #ccc;
+    flex-grow: 1;
+    display: flex;
+}
+
+footer {
+    background-color: #333;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+nav {
+    background-color: coral;
+}
+.links {
+    background-color: cornflowerblue;
+}

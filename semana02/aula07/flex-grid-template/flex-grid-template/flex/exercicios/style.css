@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    background-color: #F9B24D;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0 16px;
+}
+
+img{
+    width: 100px;
+}
+
+main {
+    background-color: #ccc;
+    flex-grow: 1;
+    display: flex;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    background-color: coral;
+    width: 300px;
+}
+.links {
+    background-color: cornflowerblue;
+    width: 200px;
+}
