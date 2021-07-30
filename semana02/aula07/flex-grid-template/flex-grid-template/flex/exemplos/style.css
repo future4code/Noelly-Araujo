@@ -1,0 +1,27 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: aquamarine;
+    height: 50px;
+    border: 1px solid #333;
+    width: 200px;
+}
+.item:nth-child(1) {
+    align-self: flex-start;
+    /* width: 300px;*/
+}
+
+.item:nth-child(2) {
+    /*flex-grow: 1;*/
+    flex-shrink: 0;
+}
+.item:nth-child(3) {
+    /*flex-grow: 2;*/
+    align-self: flex-end;
+}

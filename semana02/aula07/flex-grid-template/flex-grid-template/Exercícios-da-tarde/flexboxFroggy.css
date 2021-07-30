@@ -1,0 +1,143 @@
+/*1*/
+#Lago {
+    display: flex;
+  justify-content: flex-end;
+  }
+/*2*/
+  #Lago {
+    display: flex;
+  justify-content: center;
+  }
+  /*3*/
+  #Lago {
+    display: flex;
+  justify-content: space-around;
+  }
+
+  /*4*/
+  #Lago {
+    display: flex;
+  justify-content: space-between;
+  }
+  /*5*/
+  #Lago {
+    display: flex;
+  align-items: flex-end;
+  }
+
+  /*6*/
+  #Lago {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  /*7*/
+  #Lago {
+    display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  }
+
+  /*8*/
+  #Lago {
+  display: flex;
+flex-direction: row-reverse;
+}
+/*9*/
+#Lago {
+    display: flex;
+  flex-direction: column;
+  }
+  /*10*/
+  /*consegui usar o row-reverse*/
+
+  /*11*/
+  #Lago {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  }
+  /*12*/
+  /*usei somente o row-revese*/
+
+  /*13*/
+  #Lago {
+    display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  justify-content: 
+  }
+
+  /*14*/
+  #Lago {
+    display: flex;
+  }
+  
+  .amarelo {
+  order: 3
+  }
+
+  /*15*/
+  /*nao consegui estabelecer uma ordem*/
+
+  /*16*/
+  /* não consegui estabelecer uma ordem*/
+
+  /*17
+  {display: flex;
+  alinhar-itens: flex-start;
+  }
+  */
+
+.amarelo {
+align-self: flex-end;
+order: 3;
+}
+
+/*18*/
+#Lago {
+  display: flex;
+flex-wrap: wrap;
+}
+/*19*/
+#Lago {
+  display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+/*20*/
+#Lago {
+  display: flex;
+flex-flow: column wrap;
+}
+/*21*/
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-start;
+}
+
+/*22*/
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-end;
+}
+
+/*23*/
+/* consegui usar o flex-direction: row; */
+
+/*24*/
+
+#pond {
+  display: flex;
+justify-content: space-evenly;
+flex-direction: row-reverse;
+align-items:center;
+flex-wrap: wrap;
+}
+
