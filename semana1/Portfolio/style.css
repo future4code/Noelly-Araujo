@@ -1,0 +1,214 @@
+/*geral*/
+*/ {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/*geral*/
+
+/*header*/
+.content-head {
+    display: flex;
+}
+.header {
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#h1-header {
+    text-align: center;
+    padding-top: 100px;
+    color: #d93c2e;
+}
+
+.my-pic {
+    padding-left: 42%;
+    margin-top: 25px;
+}
+#pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 120px;
+}
+/*header*/
+
+/*imagem contrução de site*/
+.m-construcao {
+    width: 600px;
+    height: 600px;
+    padding-left: 425px;
+    padding-top: 38px;
+}
+#c-construcao {
+    width: 500px;
+    height: 400px;
+}
+/*imagem construção de site*/
+
+/*buttons*/
+#sobre {
+    background: none;
+    width: 80px;
+    font-size: 17px;
+    border: none;
+    color: #d9692e;
+}
+
+#contato {
+    background: none;
+    width: 95px;
+    border: 2px solid #fa1e15;
+    margin-left: 15px;
+    font-size: 17px;
+    border-radius: 9px;
+    color: #fa1e15;
+}
+#contato:hover {
+    background-color: #ffbd80;
+}
+
+.buttons {
+    padding-left: 80%;
+    margin-top: 20px;
+}
+/*buttons*/
+
+/*header2*/
+.apresentacao {
+    height: 320px;
+    background-color: #f0643e;
+    text-align: center;
+}
+.apresentacao h2 {
+    color: #ffff;
+    margin-top: 0;
+    padding-top: 30px;
+}
+.apresentacao p {
+    color: #ffff;
+    margin-top: 60px;
+    width: 50%;
+    font-size: 18px;
+    margin-left: 320px;
+}
+/*header2*/
+
+/*skills*/
+.content-skills {
+    height: 500px;
+    display: flex;
+    margin-top: 40px;
+    padding-left: 180px;
+    overflow: hidden;
+}
+.FrontEnd,
+.BackEnd,
+.DevTools {
+    height: 400px;
+    width: 300px;
+    margin-left: 25px;
+    box-shadow: 10px 10px 8px #888888;
+    border-radius: 16px;
+}
+.FrontEnd h3,
+.BackEnd h3,
+.DevTools h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #f57150;
+}
+.FrontEnd p,
+.BackEnd p,
+.DevTools p {
+    text-align: center;
+    color: #f56756;
+    font-size: 22px;
+    margin-top: 4px;
+}
+/*skills*/
+
+/*trabalhos recentes*/
+.Content-trabalhos {
+    height: 900px;
+    text-align: center;
+}
+.Content-trabalhos{
+    color: #EB8D40;
+}
+/*trabalhos recente*/
+
+/*slides*/
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
+.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
+
+.slide-show{
+  overflow: hidden;
+}
+
+.slides-list{
+  --selected-item: 0;
+  --total-items: 4;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: calc(var(--selected-item) * -100%);
+  width: calc(var(--total-items) * 100%);
+  transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+/*slide*/
+
+/*footer*/
+
+.footer{
+    height: 500px;
+    background-color:  #EB8C3F;
+}
+
+.formulario {
+    padding-top: 30px;
+    margin-left: 470px;
+}
+.formulario h2 {
+padding-left: 110px;
+}
+.formulario input {
+    width: 400px;
+    height: 15px;
+    margin-top: 8px;
+}
+#msg  {
+    height: 200px;
+}
+#enviar {
+    margin-top: 8px;
+}
+/*formulario*/
+
+/* redes-sociasi*/
+
+.redes-sociais h3{
+padding-left: 550px;
+}
+.redes-sociais li {
+list-style: none;
+margin-left: 5px;
+}
+.redes-sociais ul {
+    display: flex;
+    padding-left: 650px;
+}
+.redes-sociais img  {
+    width: 25px;
+    height: 25px;
+}
