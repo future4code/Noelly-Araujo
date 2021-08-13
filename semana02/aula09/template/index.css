@@ -21,7 +21,7 @@ div {
     width: 100%;
     justify-content: space-around;
     flex-grow: 1;
-    padding: 8px;
+    padding: 12px;
 }
 
 .container-do-meio {
@@ -34,7 +34,7 @@ div {
     flex-grow: 1;
     height: 100%;
     margin: 10px;
-    background-color:  black;
+    background-color: black;
     color: white;
 }
 
@@ -44,9 +44,8 @@ div {
 
 .black-block :last-child {
     margin-left: 15px;
-
 }
-.bloco-menor>div:first-child {
+.bloco-menor > div:first-child {
     flex-grow: 2;
     margin: 0px;
     height: 100%;
@@ -59,8 +58,6 @@ div {
     height: 100%;
     border: solid 1px black;
 }
-
-
 
 #first-block {
     width: 100%;
@@ -80,11 +77,48 @@ div {
     background-color: green;
 }
 
-.black-block {
-    background-color: black;
-    color: white;
-}
-
 .white-block {
     background-color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .bloco-menor {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0px 5px;
+    }
+    .bloco-menor div {
+        flex-grow: 1;
+        margin: 10px;
+        height: 100%;
+        border: solid 1px black;
+    }
+    #first-block {
+        width: 100%;
+        flex-grow: 2;
+        background-color: red;
+    }
+    .black-block:first-child {
+        margin-right: 8px;
+    }
+
+    .black-block:last-child {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bloco-menor > div:first-child {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .bloco-menor>div:last-child {
+        height: 33%;
+    }
+    .container-do-meio {
+        width: 100%;
+        justify-content: space-around;
+        flex-grow: 2;
+        padding: 10px;
+    }
 }
