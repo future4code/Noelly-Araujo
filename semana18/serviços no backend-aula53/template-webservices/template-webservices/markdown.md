@@ -1,0 +1,15 @@
+### 2)
+
+
+
+CREATE TABLE Address (
+user_id VARCHAR(255) NOT NULL PRIMARY KEY,
+CEP VARCHAR(8) NOT NULL,
+logradouro VARCHAR(255) NOT NULL,
+numero INT NOT NULL,
+complemento VARCHAR(255) DEFAULT "", 
+bairro VARCHAR(255) NOT NULL,
+cidade VARCHAR(255)  NOT NULL,
+estado VARCHAR(2) NOT NULL, 
+FOREIGN KEY (user_id) REFERENCES User(id)
+);
