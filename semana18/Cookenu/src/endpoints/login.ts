@@ -32,7 +32,7 @@ export default async function login(
     } catch (error) {
 
         let statusCode = 400
-        if (res.statusCode === 200) {
+        if(res.statusCode === 200) {
             res.status(500).send("Internal server error")
         } else {
             res.send({ statusCode})
