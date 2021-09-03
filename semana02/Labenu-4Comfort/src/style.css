@@ -1,0 +1,488 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  /*header*/
+  .content-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  header {
+    width: 100%;
+  }
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+  #button-head {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+  }
+  
+  #button-head:hover {
+    color: red;
+  }
+  
+  
+  /*Header*/
+  
+  /*section*/
+  
+  section {
+    width: 70%;
+    height: 700px;
+    margin-left: 300px;
+    display: flex;
+  }
+  #section-title {
+    margin-top: 230px;
+    margin-left: 80px;
+  }
+  #section-title h1 {
+    font-size: 50px;
+    font-family: "Anton", sans-serif;
+    color: rgb(37, 33, 33);
+  }
+  
+  .redes-sociais {
+    width: 200px;
+    height: 30px;
+  }
+  .redes-sociais img {
+    height: 25px;
+    width: 25px;
+    margin-top: 50px;
+    padding-left: 8px;
+  }
+  
+  #section-title button {
+    border: none;
+    height: 50px;
+    width: 140px;
+    background-color: red;
+    color: white;
+  }
+  
+  .background img {
+    width: 90%;
+    height: 80%;
+    margin-top: 60px;
+    margin-left: 180px;
+  }
+  
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 8px;
+    column-gap: 8px;
+    margin: 8px;
+    padding-left: 250px;
+  }
+  .card-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px darkgray;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .img-card {
+    width: 100%;
+  }
+  
+  .produtos button {
+    border: none;
+    background-color: red;
+    color: white;
+    height: 40px;
+    width: 120px;
+  }
+  /* Section de Produtos*/
+  
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 500px;
+    width: 100%;
+    background-color: tomato;
+    margin-top: 700px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .news-letter h1,
+  p {
+    text-align: center;
+  }
+  .news-letter input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 6px;
+  }
+  .news-letter button {
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+    width: 110px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 250px;
+    border-radius: 8px;
+  }
+  
+  /*media-querys*/
+  
+  @media screen and (min-device-width: 320px) and (max-device-width: 420px) {
+    .content-header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 5px;
+    }
+  
+    header img {
+      width: 60px;
+      height: 60px;
+      margin-left: 50px;
+    }
+  
+  
+  section {
+    width: 350px;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+  }
+  
+  #section-title {
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+  
+  
+  .background img {
+    width: 95%;
+    height: 60%;
+    margin-top: 60px;
+    margin-left: 18px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8px;
+    column-gap: 8px;
+    margin: 8px;
+    padding-left: 5px;
+  }
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 350px;
+    width: 100%;
+    background-color: tomato;
+    margin-top: 220vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  .news-letter input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+  .news-letter button {
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+    width: 110px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 120px;
+    border-radius: 8px;
+  }
+  
+  }
+  
+  @media screen and (max-device-width: 640px) {
+  
+    .content-header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 5px;
+    }
+  
+    header img {
+      width: 60px;
+      height: 60px;
+      margin-left: 50px;
+    }
+  
+  
+  section {
+    width: 350px;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+  }
+  
+  #section-title {
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+  
+  
+  .background img {
+    width: 95%;
+    height: 60%;
+    margin-top: 60px;
+    margin-left: 18px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8px;
+    column-gap: 8px;
+    margin: 8px;
+    padding-left: 5px;
+  }
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 350px;
+    width: 100%;
+    background-color: tomato;
+    margin-top: 220vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .news-letter input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+  .news-letter button {
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+    width: 110px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 120px;
+    border-radius: 8px;
+  }
+  }
+  
+  
+  @media screen and (max-device-width: 812px){
+  
+    .content-header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 5px;
+    }
+  
+    header img {
+      width: 60px;
+      height: 60px;
+      margin-left: 50px;
+    }
+  
+  
+  section {
+    width: 350px;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+  }
+  
+  #section-title {
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+  
+  
+  .background img {
+    width: 95%;
+    height: 60%;
+    margin-top: 60px;
+    margin-left: 18px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8px;
+    column-gap: 8px;
+    margin: 8px;
+    padding-left: 5px;
+  }
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 350px;
+    width: 100%;
+    background-color: tomato;
+    margin-top: 180vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .news-letter input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+  .news-letter button {
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+    width: 110px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 120px;
+    border-radius: 8px;
+  }
+  }
+  
+  @media screen and (max-device-width: 667px) {
+  
+    .content-header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 5px;
+    }
+  
+    header img {
+      width: 60px;
+      height: 60px;
+      margin-left: 50px;
+    }
+  
+  
+  section {
+    width: 350px;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+  }
+  
+  #section-title {
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+  
+  
+  .background img {
+    width: 95%;
+    height: 60%;
+    margin-top: 60px;
+    margin-left: 18px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8px;
+    column-gap: 8px;
+    margin: 8px;
+    padding-left: 5px;
+  }
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 350px;
+    width: 100%;
+    background-color: tomato;
+    margin-top: 210vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .news-letter input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+  .news-letter button {
+    margin-top: 20px;
+    text-align: center;
+    height: 60px;
+    width: 110px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 120px;
+    border-radius: 8px;
+  }
+  }
