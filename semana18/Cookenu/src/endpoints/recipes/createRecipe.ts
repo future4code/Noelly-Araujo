@@ -17,6 +17,16 @@ export default async function (
 
         const tokenData = getTokenData(token!)
 
+        if (!tokenData) {
+            res.statusCode = 401
+            throw new Error("Check the validity or value of the token passed in the headers.")
+        }
+
+        if(!title || !description) {
+            res.statusCode = 422
+            throw new Error("'title' and 'description'  required")
+        }
+
         const id = generateId()
 
         const createdAt = new Date()
@@ -30,14 +40,14 @@ export default async function (
                 author_id: tokenData!.id
             })
 
-            res.send("Recipe created!")
+        res.send("Recipe created!")
     } catch (error) {
-        console.log(error.message)
 
         if (res.statusCode === 200) {
             res.status(500).send("Internal server error")
         } else {
-            res.send(error.message)
+            res.send({ error: `${error}` })
+
         }
     }
 }

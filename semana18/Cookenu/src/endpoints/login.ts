@@ -14,12 +14,17 @@ export default async function login(
 
         const { email, password } = req.body
 
+        if(!email || !password){
+            res.statusCode = 422
+            throw new Error("'email' and 'password' required")
+        }
+
         const [user] = await connection(userTableName)
             .where({ email })
 
-        const passwordIsCorrect: boolean = compareHash(password, user.password)
+        const passwordIsCorrect: boolean = compareHash(password, user?.password)
 
-        if (!passwordIsCorrect) {
+        if ( !passwordIsCorrect) {
             res.statusCode = 401
             throw new Error("Invalid credentials")
         }
@@ -30,12 +35,12 @@ export default async function login(
 
 
     } catch (error) {
-
-        let statusCode = 400
-        if(res.statusCode === 200) {
+  
+        if (res.statusCode === 200) {
             res.status(500).send("Internal server error")
         } else {
-            res.send({ statusCode})
+            res.send({ error: `${error}` })
+
         }
     }
 }

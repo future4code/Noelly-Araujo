@@ -5,14 +5,33 @@ import { generateHash } from "../../services/hashManager"
 import generateId from "../../services/idGenerator"
 import { userTableName } from "../../types"
 
+
 export default async function signup(
     req: Request,
     res: Response
 ): Promise<void> {
+
     try {
 
         const { name, email, password } = req.body
 
+        if (!name || !email || !password) {
+            res.statusCode = 422
+            throw new Error("'name', 'email' and 'password' required")
+        }
+        if (password.length < 6) {
+            res.statusCode = 422
+            throw new Error("Password must contain at least 6 characters")
+        }
+
+
+        const [user] = await connection(userTableName)
+            .where({ email })
+
+        if (user) {
+            res.statusCode = 409
+            throw new Error("Email already in use")
+        }
         const id: string = generateId()
 
 
@@ -28,7 +47,11 @@ export default async function signup(
 
         res.send({ token })
     } catch (error) {
-        console.log()
-        res.status(500).send("Internal server error")
+
+        if (res.statusCode === 200) {
+            res.status(500).send("Internal server error")
+        } else {
+            res.send({ error: `${error}` })
+        }
     }
 }
