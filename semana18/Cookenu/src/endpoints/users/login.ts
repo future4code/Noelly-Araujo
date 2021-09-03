@@ -1,8 +1,8 @@
 import { Request, Response } from "express"
-import { connection } from "../connection"
-import { generateToken } from "../services/authenticator"
-import { compareHash } from "../services/hashManager"
-import { userTableName } from "../types"
+import { connection } from "../../connection"
+import { generateToken } from "../../services/authenticator"
+import { compareHash } from "../../services/hashManager"
+import { userTableName } from "../../types"
 
 
 

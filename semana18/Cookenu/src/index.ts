@@ -1,5 +1,5 @@
 import app from "./app"
-import login from "./endpoints/login"
+import login from "./endpoints/users/login"
 import createRecipe from "./endpoints/recipes/createRecipe"
 import getRecipeById from "./endpoints/recipes/getRecipeById"
 import getProfile from "./endpoints/users/getProfile"
