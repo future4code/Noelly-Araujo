@@ -6,7 +6,7 @@ import { selectUserById } from "../data/selectUserById"
 export const validateToken = async (
     token: string
 ): Promise<boolean> => {
-    const userAuthenticationData = getTokenData(token)
+    const userAuthenticationData: authenticationData = getTokenData(token)
 
     const user = selectUserById(userAuthenticationData.id)
     if(user){
