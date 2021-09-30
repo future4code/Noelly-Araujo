@@ -19,7 +19,7 @@ export const getAllUsers = async (
         const users = await selectAllUsers()
 
         res.send(users).status(200)
-    } catch (error) {
+    } catch (error: any) {
         res.send({message: error.message}).status(error.status)
     }
 }

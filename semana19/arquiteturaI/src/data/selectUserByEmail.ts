@@ -15,7 +15,7 @@ try {
         role: result[0].role
     }
     
-} catch (error) {
+} catch (error: any) {
     throw new Error(error.sqlMessage || error.message)
 }
 }

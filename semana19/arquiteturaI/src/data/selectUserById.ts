@@ -16,7 +16,7 @@ export const selectUserById = async (id: string):Promise<user> => {
         }
 
 
-    } catch (error) {
+    } catch (error: any) {
         throw new Error(error.sqlMessage || error.message)
     }
 }

@@ -11,7 +11,7 @@ export const deleteUser = async (req: Request, res: Response) => {
     res.status(201).send({
       message: "User deleted!",
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(400).send(error.message);
   }
 };

@@ -8,7 +8,7 @@ export const selectAllUsers = async (): Promise<user[]> => {
         .select("*")
 
         return result
-    } catch (error) {
+    } catch (error: any) {
         throw new Error(error.sqlMessage || error.message)
     }
 } 

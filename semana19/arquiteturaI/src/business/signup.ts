@@ -38,7 +38,7 @@ export const signup = async (
         res.status(201).send({
             token
         })
-    } catch (error) {
+    } catch (error: any) {
         res.status(400).send(error.message)
     }
 }
