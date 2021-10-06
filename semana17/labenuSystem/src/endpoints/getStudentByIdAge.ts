@@ -19,7 +19,7 @@ export default async function getStudentByIdAge (req: Request, res: Response){
         `)
 
         res.status(200).send({estudante: result[0][0]})
-    } catch (error) {
+    } catch (error: any) {
         res.status(errorCode).send({message: error.sqlMessage || error.message})
     }
 

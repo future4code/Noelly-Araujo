@@ -35,7 +35,7 @@ export default async function (
       await putTeacher(Number(req.body.docente_id), Number(req.body.turma_id))
 
       res.status(200).send(`Professor cadastrado na turma ${req.body.turma_id} com sucesso!`)
-    } catch (error) {
+    } catch (error: any) {
         res.status(400).send({ message: error.sqlMessage || error.message })
     }
 }

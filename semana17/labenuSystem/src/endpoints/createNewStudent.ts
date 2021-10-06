@@ -61,7 +61,7 @@ export default async function createStudent(
         res.status(200).send('student added successfully')
 
 
-    } catch (error) {
+    } catch (error: any) {
 
         res.status(errorCode).send({ message: error.sqlMessage || error.message })
     }

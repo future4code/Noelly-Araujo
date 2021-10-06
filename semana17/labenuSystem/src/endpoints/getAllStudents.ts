@@ -13,7 +13,7 @@ export default async function getAllStudents(req:Request, res: Response): Promis
      
     
         res.send(estudantes)
-     } catch (error) {
+     } catch (error: any) {
         res.status(500).send("Unexpected server error")
      
  }

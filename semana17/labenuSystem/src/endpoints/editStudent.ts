@@ -32,7 +32,7 @@ try {
     await putStudent(Number(req.body.estudante_id), Number(req.body.turma_id))
 
     res.status(200).send("Estudante atualizado com sucesso!")
-} catch (error) {
+} catch (error: any) {
     res.status(errorCode).send({message: error.sqlMessage || error.message})
 }
 

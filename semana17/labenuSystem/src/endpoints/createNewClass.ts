@@ -43,7 +43,7 @@ VALUES(
 `);
 
         res.status(201).send({ message: "Turma crida com sucesso!" })
-    } catch (error) {
+    } catch (error: any) {
         res.status(errorCode).send({ message: error.message })
     }
 }

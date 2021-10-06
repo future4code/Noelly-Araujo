@@ -49,7 +49,7 @@ export default async function createNewTeacher(
         }
 
         res.status(201).send({ message: "Docente criado com sucesso!" })
-    } catch (error) {
+    } catch (error: any) {
         res.status(400).send({message: error.sqlMessage || error.message})
     }
 }

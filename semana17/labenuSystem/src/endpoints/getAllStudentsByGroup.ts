@@ -29,7 +29,7 @@ export default async function getAllStudentsByGroup(
       }
 
         res.status(200).send(result)
-    } catch (error) {
+    } catch (error: any) {
         res.status(400).send({ message: error.sqlMessage || error.message })
 
     }
