@@ -1,7 +1,5 @@
-export interface User {
-    name: string,
-    balance: number
-}
+import { User } from "../models/user"
+
 
 export function performPurchase(user: User, value: number): User | undefined {
     if (user.balance >= value){
