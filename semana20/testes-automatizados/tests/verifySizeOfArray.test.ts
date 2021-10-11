@@ -70,4 +70,6 @@ describe("Verify size of array Users", () => {
             expect(result.brazilians.unallowed).toContain("AstrodevBR")
             expect(result.americans.unallowed).toContain("AstrodevUS")
     })
+
+    
 })
