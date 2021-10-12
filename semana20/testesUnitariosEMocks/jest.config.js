@@ -1,4 +1,3 @@
-jsx
 module.exports = {
  roots: ["<rootDir>/tests"],
  transform: {
