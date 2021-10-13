@@ -1,4 +1,4 @@
-import { Characters} from "./models/personagens";
+import { Characters} from "../models/personagens";
 
 export const validateCharacter = (
 input: Characters

@@ -1,4 +1,4 @@
-import { validateCharacter } from "../src/validateCharacter"
+import { validateCharacter } from "../src/business/validateCharacter"
 
 
 // 2

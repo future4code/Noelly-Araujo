@@ -1,4 +1,4 @@
-import { validateCharacter } from "./validateCharacter";
+import { validateCharacter } from "./business/validateCharacter";
 
 const result = validateCharacter(
     {
