@@ -1,7 +1,7 @@
 import { User } from "../../src/model/User";
 import { userMockAdmin, userMockNormal } from "./UserMock";
 
-export class UserDatabase {
+export class UserDatabaseMock {
 
 
 
@@ -37,4 +37,4 @@ export class UserDatabase {
    }
 }
 
-export default new UserDatabase()
+export default new UserDatabaseMock()

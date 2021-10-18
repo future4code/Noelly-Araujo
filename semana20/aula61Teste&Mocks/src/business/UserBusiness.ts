@@ -1,5 +1,5 @@
 import { CustomError } from "../errors/CustomError";
-import { User, stringToUserRole } from "../model/User";
+import { User, stringToUserRole, USER_ROLES } from "../model/User";
 import userDatabase, { UserDatabase } from "../data/UserDatabase";
 import hashGenerator, { HashGenerator } from "../services/hashGenerator";
 import idGenerator, { IdGenerator } from "../services/idGenerator";
@@ -47,7 +47,7 @@ export class UserBusiness {
             role,
          });
          return { accessToken };
-      } catch (error: any) {
+      } catch (error) {
          if (error.message.includes("key 'email'")) {
             throw new CustomError(409, "Email already in use")
          }
@@ -85,9 +85,41 @@ export class UserBusiness {
          });
 
          return { accessToken };
-      } catch (error: any) {
+      } catch (error) {
          throw new CustomError(error.statusCode, error.message)
       }
+   }
+
+// 1 a)
+   public async getUserById(id: string) {
+      const user = await this.userDatabase.getUserById(id);
+
+      if (!user) {
+         throw new CustomError(404, "User not found");
+      }
+
+      return {
+         id: user.getId(),
+         name: user.getName(),
+         email: user.getEmail(),
+         role: user.getRole(),
+      };
+   }
+
+   // 3a)
+   public async getAllUsers(role: USER_ROLES) {
+      if(stringToUserRole(role) !== USER_ROLES.ADMIN) {
+         throw new CustomError(401, "You must be an admin to access this endpoint")
+      }
+      const users = await this.userDatabase.getAllUsers()
+
+      return users.map((user)=> 
+      ({
+         id: user.getId(),
+         name: user.getName(),
+         email: user.getEmail(),
+         role: user.getRole()
+      }))
    }
 }
 

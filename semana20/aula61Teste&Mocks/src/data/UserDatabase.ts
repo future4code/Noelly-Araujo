@@ -30,7 +30,7 @@ export class UserDatabase extends BaseDataBase {
             '${user.getRole()}'
             )`
          );
-      } catch (error: any) {
+      } catch (error) {
          throw new Error(error.sqlMessage || error.message)
       }
    }
@@ -41,21 +41,11 @@ export class UserDatabase extends BaseDataBase {
             SELECT * from ${this.tableName} WHERE email = '${email}'
          `);
          return this.toModel(result[0][0]);
-      } catch (error: any) {
-         throw new Error(error.sqlMessage || error.message)
-      }
-   }
-
-   public async getUserById(id: string): Promise<User | undefined> {
-      try {
-         const result = await BaseDataBase.connection.raw(`
-            SELECT * from ${this.tableName} WHERE id = '${id}'
-         `);
-         return this.toModel(result[0][0]);
       } catch (error) {
          throw new Error(error.sqlMessage || error.message)
       }
    }
+
 
    public async getAllUsers(): Promise<User[]> {
       try {
@@ -65,10 +55,24 @@ export class UserDatabase extends BaseDataBase {
          return result[0].map((res: any) => {
             return this.toModel(res);
          });
-      } catch (error: any) {
+      } catch (error) {
          throw new Error(error.sqlMessage || error.message)
       }
    }
+
+   public async getUserById(id: string):Promise<User | undefined >{
+      try {
+         const result = await BaseDataBase.connection.raw(`
+         SELECT * FROM ${this.tableName} WHERE id = '${id}'
+`)
+
+         return this.toModel(result[0][0])
+      } catch (error) {
+         throw new error(error.sqlMessage || error.message)
+      }
+   }
 }
+
+
 
 export default new UserDatabase()

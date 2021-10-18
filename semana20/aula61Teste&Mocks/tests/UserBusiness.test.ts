@@ -1,14 +1,15 @@
 import { UserBusiness } from "../src/business/UserBusiness"
 import { UserDatabase } from "../src/data/UserDatabase"
+import { USER_ROLES } from "../src/model/User"
 import hashGeneratorMock from "./mocks/hashGeneratorMock"
 import idGeneratorMock from "./mocks/idGeneratorMock"
 import tokenGeneratorMock from "./mocks/tokenGeneratorMock"
-import userDatabaseMock from "./mocks/UserDatabaseMock"
+import UserDatabaseMock from "./mocks/UserDatabaseMock"
 
 const userBusinessMock = new UserBusiness(
     idGeneratorMock,
     hashGeneratorMock,
-    userDatabaseMock as UserDatabase,
+    UserDatabaseMock as UserDatabase,
     tokenGeneratorMock
 
 )
@@ -25,7 +26,7 @@ describe("UserBusiness", () => {
                     "teste1234",
                     "NORMAL"
                 )
-            } catch (error: any) {
+            } catch (error) {
                 expect(error.statusCode).toBe(422)
                 expect(error.message).toBe("Missing input")
             }
@@ -43,7 +44,7 @@ describe("UserBusiness", () => {
                     "teste1234",
                     "NORMAL"
                 )
-            } catch (error: any) {
+            } catch (error) {
                 expect(error.statusCode).toBe(422)
                 expect(error.message).toBe("Invalid email")
             }
@@ -62,7 +63,7 @@ describe("UserBusiness", () => {
                     "NORMAL"
                 )
 
-            } catch (error: any) {
+            } catch (error) {
                 expect(error.statusCode).toBe(422)
                 expect(error.message).toBe("Invalid password")
             }
@@ -79,7 +80,7 @@ describe("UserBusiness", () => {
                     "teste1234",
                     "LALALA"
                 )
-            } catch (error: any) {
+            } catch (error) {
                 expect(error.statusCode).toBe(422)
                 expect(error.message).toBe("Invalid user role")
             }
@@ -98,7 +99,7 @@ describe("UserBusiness", () => {
                 )
 
                 expect(accessToken).toBe("token_mock")
-            } catch (error: any) {
+            } catch (error) {
                 console.log(error.message)
             }
         })
@@ -115,7 +116,7 @@ describe("UserBusiness", () => {
                     "test@gmail.com",
                     "rafsrtk7"
                 )
-            } catch (error: any) {
+            } catch (error) {
                 expect(error.statusCode).toBe(401)
                 expect(error.message).toBe("Invalid credentials")
             }
@@ -131,7 +132,7 @@ describe("UserBusiness", () => {
                     "astrodev@gmail.com",
                     "rafsrtk7"
                 )
-            } catch (error: any) {
+            } catch (error) {
                 expect(error.statusCode).toBe(401)
                 expect(error.message).toBe("Invalid credentials")
             }
@@ -149,13 +150,94 @@ describe("UserBusiness", () => {
 
                 expect(accessToken).toBe("token_mock")
 
-            } catch (error: any) {
+            } catch (error) {
                 console.log(error.message)
             }
         })
 
     })
 
+    //a)
+
+    describe("getUserById when the user not found", () => {
+        test("User not registered", async () => {
+            expect.assertions(2)
+            try {
+                await userBusinessMock.getUserById("1234jhd")
+
+            } catch (error) {
+                expect(error.statusCode).toBe(404)
+                expect(error.message).toBe("User not found")
+            }
+        })
+
+         //b)
+    test("Sucess message when user id is resgistered", async () => {
+        expect.assertions(2)
+        try {
+            const getUserById = jest.fn(
+                (id: string) => userBusinessMock.getUserById(id)
+            )
+            const result = await getUserById("id_mock_admin")
+
+            expect(getUserById).toHaveBeenCalledWith("id_mock_admin")
+            expect(result).toEqual({
+                id: "id_mock_admin",
+                name: "astrodev",
+                email: "astrodev@gmail.com",
+                role: "ADMIN"
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
+    })
+    })
+
+   
+
+//4 a)
+    describe("getAllUsers", ()=> {
+        test("Should catch error when role is not 'ADMIN'", async() => {
+            expect.assertions(2)
+
+            try {
+                await userBusinessMock.getAllUsers(USER_ROLES.NORMAL)
+            } catch (error) {
+              expect(error.statusCode).toBe(401)
+              expect(error.message).toBe("You must be an admin to access this endpoint")
+
+            }
+        })
+
+        //b)
+        test("Should return all users when authorized", async() => {
+            expect.assertions(3)
+            try {
+                const getAllUsers = jest.fn(
+                    (role: USER_ROLES) => userBusinessMock.getAllUsers(role)
+                )
+
+                const result = await getAllUsers(USER_ROLES.ADMIN)
+
+                expect(getAllUsers).toHaveBeenCalledWith(USER_ROLES.ADMIN)
+                expect(result).toContainEqual({
+                    id: "id_mock_admin",
+                    name: "astrodev",
+                    email: "astrodev@gmail.com",
+                    role: "ADMIN",
+                })
+                expect(result).toContainEqual({
+                    id: "id_mock_normal",
+                    name: "bananinha",
+                    email: "bananinha@gmail.com",
+                    role: "NORMAL",
+                  })
+            } catch (error) {
+                console.log(error.message)
+
+            }
+        })
+    })
 
 
 
