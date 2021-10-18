@@ -239,6 +239,21 @@ describe("UserBusiness", () => {
         })
     })
 
+    //6 1.1
+    describe("getProfile", () => {
+        test("User not found", async() => {
+            expect.assertions(2)
+            try {
+                await userBusinessMock.getProfile("uy7886")
+
+            } catch (error) {
+                expect(error.statusCode).toBe(404)
+                expect(error.message).toBe("User not found")
+            }
+        })  
+    
+    })
+
 
 
 })

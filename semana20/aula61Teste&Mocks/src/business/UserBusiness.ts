@@ -121,6 +121,23 @@ export class UserBusiness {
          role: user.getRole()
       }))
    }
+
+   //5 a)
+
+   public async getProfile(id: string ){
+      const user = await this.userDatabase.getUserById(id)
+
+      if(!user) {
+         throw new CustomError(404, "User not found")
+      }
+
+      return{
+         id: user.getId(),
+         name: user.getName(),
+         email: user.getEmail(),
+         role: user.getRole()
+      }
+   }
 }
 
 export default new UserBusiness(
