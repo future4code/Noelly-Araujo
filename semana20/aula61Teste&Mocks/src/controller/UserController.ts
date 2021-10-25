@@ -13,7 +13,7 @@ export class UserController {
             role
          );
          res.status(200).send(result);
-      } catch (error: any) {
+      } catch (error) {
          const { statusCode, message } = error
          res.status(statusCode || 400).send({ message });
       }
