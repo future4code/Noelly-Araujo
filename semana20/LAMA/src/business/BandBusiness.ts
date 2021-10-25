@@ -3,7 +3,7 @@ import { Authenticator } from "../services/Authenticator"
 import { Band, BandInputDTO } from "../model/Band";
 import { UserRole } from "../model/User";
 import { UnauthorizedError } from "../error/UnauthorizedError";
-import { InvalidInputError } from "../error/InvalidInputerror";
+import { InvalidInputError } from "../error/InvalidInputError";
 import { BandDatabase } from "../data/BandDatabase";
 
 
