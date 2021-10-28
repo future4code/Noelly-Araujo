@@ -1,6 +1,6 @@
 import { BandDatabase } from "../data/BandDatabase";
 import { ShowDatabase } from "../data/ShowDatabase";
-import { InvalidInputError } from "../error/InvalidInputerror";
+import { InvalidInputError } from "../error/InvalidInputError";
 import { NotFoundError } from "../error/NotFoundError";
 import { UnauthorizedError } from "../error/UnauthorizedError";
 import { Show, ShowInputDTO, WeekDay } from "../model/Show";
