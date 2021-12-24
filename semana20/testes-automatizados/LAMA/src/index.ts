@@ -22,4 +22,4 @@ const server = app.listen(3003, () => {
     } else {
       console.error(`Falha ao rodar o servidor.`);
     }
-  });
+  })
